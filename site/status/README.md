@@ -32,6 +32,12 @@
 </picture>
 
 ### Network Traffic (Last 30 Days)
-![Network Traffic Last Few Days](/status/vnstat.png)
+<picture>
+    <source srcset="/status/vnstat-dark.png" media="(prefers-color-scheme: dark)">
+    <img src="/status/vnstat.png">
+</picture>
 
-![Network Traffic Last 30 Days](/status/vnstat-last-month.png)
+<picture>
+    <source srcset="/status/vnstat-last-month-dark.png" media="(prefers-color-scheme: dark)">
+    <img src="/status/vnstat-last-month.png">
+</picture>
