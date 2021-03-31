@@ -1,4 +1,8 @@
 .custom-block
+  p
+    code
+      @media (prefers-color-scheme: dark)
+        color $textHighColor
   .custom-block-title
     font-weight 600
     margin-bottom -0.4rem
@@ -9,15 +13,19 @@
     margin 1rem 0
   &.tip
     background-color #f3f5f7
+    @media (prefers-color-scheme: dark)
+      background-color #333
     border-color #42b983
   &.warning
-    background-color rgba(255,229,100,.3)
+    background-color rgb(255,239,190)
     border-color darken(#ffe564, 35%)
     color darken(#ffe564, 70%)
     .custom-block-title
       color darken(#ffe564, 50%)
     a
       color $textColor
+      @media (prefers-color-scheme: dark)
+        color $textDarkColor
   &.danger
     background-color #ffe6e6
     border-color darken(red, 20%)
@@ -26,5 +34,7 @@
       color darken(red, 40%)
     a
       color $textColor
+      @media (prefers-color-scheme: dark)
+        color $textDarkColor
 
 

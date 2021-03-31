@@ -98,6 +98,8 @@ export default {
 
 .sidebar-heading
   color $textColor
+  @media (prefers-color-scheme: dark)
+    color $textDarkColor
   transition color .15s ease
   cursor pointer
   font-size 1.1em

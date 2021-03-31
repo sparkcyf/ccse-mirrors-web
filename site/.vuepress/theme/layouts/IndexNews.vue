@@ -186,12 +186,16 @@ export default {
 
     li
       border 1px solid alpha($textColor, 15%)
+      @media (prefers-color-scheme: dark)
+        border 1px solid alpha($textDarkColor, 15%)
       border-radius 3px
       margin 2rem 0
       display block
 
       .post-meta
         border-top 1px solid alpha($textColor, 15%)
+        @media (prefers-color-scheme: dark)
+          border-top 1px solid alpha($textDarkColor, 15%)
         padding 1rem 1.5rem
 
         .icon
@@ -218,4 +222,32 @@ export default {
 .page-nav-container
   @extend $wrapper
   text-align center
+
+@media (prefers-color-scheme: dark)
+  .pagination
+
+    li
+
+      a
+        &
+          background-color $sustechDark
+          color $sustechGreen
+        &:hover
+          background-color $sustechGreen
+          color #fff
+        &:focus
+          background-color $sustechGreen
+          color #fff
+
+      &.disabled a
+        &
+          background-color #222
+          color #555
+        &:hover
+          background-color #222
+          color #555
+        &:focus
+          background-color #222
+          color #555
+
 </style>

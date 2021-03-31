@@ -9,7 +9,7 @@
         <li v-for="post in newsPosts">
           <!-- <v-icon name="quote-left" class="quote-icon"/> -->
           <svg class="quote-icon fa-icon" aria-hidden="true" width="12" height="12" viewBox="0 0 512 512" focusable="false">
-            <path d="M464 256c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48h-128c-26.5 0-48-21.5-48-48v-240c0-88.4 71.6-160 160-160h8c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-8c-35.3 0-64 28.7-64 64v64h80zM176 256c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48h-128c-26.5 0-48-21.5-48-48v-240c0-88.4 71.6-160 160-160h8c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-8c-35.3 0-64 28.7-64 64v64h80z"></path>
+            <path id="quote-mark" d="M464 256c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48h-128c-26.5 0-48-21.5-48-48v-240c0-88.4 71.6-160 160-160h8c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-8c-35.3 0-64 28.7-64 64v64h80zM176 256c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48h-128c-26.5 0-48-21.5-48-48v-240c0-88.4 71.6-160 160-160h8c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-8c-35.3 0-64 28.7-64 64v64h80z"></path>
           </svg>
           <router-link class="news-title" :to="post.path">{{ post.title }}</router-link>
           <div class="meta" v-if="post.date">
@@ -76,6 +76,8 @@ export default {
     .meta
       font-style italic
       color lighten($textColor, 20%)
+      @media (prefers-color-scheme: dark)
+        color lighten($textDarkColor, 20%)
 
     ul
       margin 0
@@ -86,14 +88,21 @@ export default {
       li
         padding 0.5rem 0
         border-bottom 1px solid alpha($textColor, 10%)
+        @media (prefers-color-scheme: dark)
+          border-bottom 1px solid alpha($textDarkColor, 10%)
 
         .quote-icon
           margin-left -1.5rem
           margin-right 0.5rem
           font-size: 0.75em
+          //fill: lighten($textColor, 20%)
+          @media (prefers-color-scheme: dark)
+            fill: lighten($textDarkColor, 20%)
         
         .news-title
           color $textColor
+          @media (prefers-color-scheme: dark)
+            color $textDarkColor
 
           &:hover
             color $accentColor

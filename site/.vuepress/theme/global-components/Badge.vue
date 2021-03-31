@@ -32,6 +32,8 @@ export default {
   border-radius 3px
   padding 0 6px
   color white
+  @media (prefers-color-scheme: dark)
+    color black
   background-color #42b983
   &.tip, &.green
     background-color #42b983

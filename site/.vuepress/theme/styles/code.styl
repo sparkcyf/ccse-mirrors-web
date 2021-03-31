@@ -1,6 +1,8 @@
 {$contentClass}
   code
     color lighten($textColor, 20%)
+    @media (prefers-color-scheme: dark)
+      color lighten($textDarkColor, 20%)
     padding 0.25rem 0.5rem
     margin 0
     font-size 0.85em

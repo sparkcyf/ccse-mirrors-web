@@ -208,6 +208,8 @@ function flatten (items, res) {
     display inline-block
     a
       color lighten($textColor, 25%)
+      @media (prefers-color-scheme: dark)
+        color lighten($textDarkColor, 25%)
       margin-right 0.25rem
   .last-updated
     float right
@@ -215,6 +217,8 @@ function flatten (items, res) {
     .prefix
       font-weight 500
       color lighten($textColor, 25%)
+      @media (prefers-color-scheme: dark)
+        color lighten($textDarkColor, 25%)
     .time
       font-weight 400
       color #aaa

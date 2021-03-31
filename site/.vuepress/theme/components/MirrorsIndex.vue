@@ -156,12 +156,18 @@ table
 
     &.working
       background-color lighten($sustechGreen, 85%)
+      @media (prefers-color-scheme: dark)
+        background-color darken($sustechGreen, 70%)
 
     &.problematic
       background-color lighten($sustechOrange, 90%)
+      @media (prefers-color-scheme: dark)
+        background-color darken($sustechOrange, 50%)
 
     &:hover
       background-color lighten($sustechGreen, 70%)
+      @media (prefers-color-scheme: dark)
+        background-color darken($sustechGreen, 50%)
 
   thead th, tbody td
     text-align left
@@ -201,6 +207,8 @@ table
 
       &:hover
         color lighten($textColor, 10%)
+        @media (prefers-color-scheme: dark)
+          color lighten($textDarkColor, 10%)
 
 #filter
   float right
@@ -214,6 +222,8 @@ table
 
   &.focusing
     background-color alpha($textColor, 7%)
+    @media (prefers-color-scheme: dark)
+      background-color alpha($textDarkColor, 7%)
 
   input
     border none

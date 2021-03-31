@@ -103,6 +103,8 @@ a.sidebar-link
   font-weight 400
   display inline-block
   color $textColor
+  @media (prefers-color-scheme: dark)
+    color $textDarkColor
   border-left 0.25rem solid transparent
   padding 0.35rem 1rem 0.35rem 1.25rem
   line-height 1.4

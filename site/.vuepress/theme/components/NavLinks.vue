@@ -123,6 +123,8 @@ export default {
     color inherit
     &:hover, &.router-link-active
       color $accentColor
+      @media (prefers-color-scheme: dark)
+        color $textHighColor
   .nav-item
     position relative
     display inline-block
@@ -146,4 +148,9 @@ export default {
     &:hover, &.router-link-active
       margin-bottom -2px
       border-bottom 3px solid lighten($accentColor, 8%)
+
+@media (min-width: $MQMobile) and (prefers-color-scheme: dark)
+  .nav-links a
+    &:hover, &.router-link-active
+      color $textHighColor
 </style>
