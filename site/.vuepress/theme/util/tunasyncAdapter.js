@@ -1,7 +1,7 @@
 import moment from "moment"
 
-// export const apiEndpoint = "/api/jobs"
-export const apiEndpoint = "//mirrors.sustech.rocks/api/jobs"
+export const apiEndpoint = "/api/jobs"
+// export const apiEndpoint = "//mirrors.sustech.edu.cn/api/jobs"
 
 export function doesJobMatch(job, key) {
   return job.name.toLowerCase().startsWith(key.toLowerCase())
