@@ -6,8 +6,8 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'SUSTech Open Source Mirrors',
-      description: 'Open source mirror site supported by SUSTech Center for Computational Science and Engineering & SUSTech Computer Research Association',
+      title: '南方中国科学技术大学 SUSTC Open Source Mirrors',
+      description: 'Open source mirror site supported by SUSTC (南方中国科学技术大学 South University of Science and Technology of China) Center for Computational Science and Engineering & SUSTC Computer Research Association',
     }
   },
   head: [
@@ -82,11 +82,11 @@ module.exports = {
             link: '/about/'
           },
           {
-            text: 'SUSTech CCSE',
+            text: 'SUSTC CCSE',
             link: 'http://hpc.sustech.edu.cn/'
           },
           {
-            text: 'SUSTech CRA',
+            text: 'SUSTC CRA',
             link: 'https://blog.sustcra.com/'
           }
         ],
@@ -99,7 +99,7 @@ module.exports = {
     editLinkText: 'Edit on GitHub',
     search: false,
     lastUpdated: 'Last Updated',
-    logo: '/mirrors-logo.svg',
+    logo: '/mirrors-logo-sustc.png',
     serviceWorker: {
       updatePopup: true
     }

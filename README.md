@@ -1,6 +1,6 @@
-# CCSE Open Source Mirrors Website
+# SUSTC Open Source Mirrors Website
 
-This project builds the front-end website for [SUSTech CCSE Open Source Mirrors](https://mirrors.sustech.rocks/). It is built upon [Vuepress](https://vuepress.vuejs.org/).
+This project builds the front-end website for [SUSTC CCSE Open Source Mirrors](https://mirrors.sustech.rocks/). It is built upon [Vuepress](https://vuepress.vuejs.org/).
 
 ## Setup
 
@@ -28,4 +28,4 @@ By default, static files are generated in `site/.vuepress/dist/`. Publish the di
 
 ## Acknowledgement
 
-CCSE Open Source Mirrors is supported by [SUSTech Center for Computational Science and Engineering](http://hpc.sustech.edu.cn/).
+CCSE Open Source Mirrors is supported by [SUSTC Center for Computational Science and Engineering](http://hpc.sustech.edu.cn/).
