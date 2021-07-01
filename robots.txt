@@ -1,0 +1,88 @@
+# robots.txt for https://mirrors.sustech.edu.cn
+User-agent: *
+
+Disallow: /logs
+
+# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+# ROBOTS.txt for Gitlab Service
+# To ban all spiders from the entire site uncomment the next two lines:
+# User-Agent: *
+# Disallow: /
+
+# Add a 1 second delay between successive requests to the same server, limits resources used by crawler
+# Only some crawlers respect this setting, e.g. Googlebot does not
+# Crawl-delay: 1
+
+# Based on details in https://gitlab.com/gitlab-org/gitlab/blob/master/config/routes.rb,
+# https://gitlab.com/gitlab-org/gitlab/blob/master/spec/routing, and using application
+
+# Global routes
+User-Agent: *
+Disallow: /git/autocomplete/users
+Disallow: /git/autocomplete/projects
+Disallow: /git/search
+Disallow: /git/admin
+Disallow: /git/profile
+Disallow: /git/dashboard
+Disallow: /git/users
+Disallow: /git/help
+Disallow: /git/s/
+Disallow: /git/-/profile
+Disallow: /git/-/ide/
+# Restrict allowed routes to avoid very ugly search results
+Allow: /git/users/sign_in
+Allow: /git/users/*/snippets
+
+# Generic resource routes like new, edit, raw
+# This will block routes like:
+# - /projects/new
+# - /gitlab-org/gitlab-foss/issues/123/-/edit
+User-Agent: *
+Disallow: /git/*/new
+Disallow: /git/*/edit
+Disallow: /git/*/raw
+Disallow: /git/*/realtime_changes
+
+# Group details
+User-Agent: *
+Disallow: /git/groups/*/analytics
+Disallow: /git/groups/*/contribution_analytics
+Disallow: /git/groups/*/group_members
+
+# Project details
+User-Agent: *
+Disallow: /git/*/*.git$
+Disallow: /git/*/archive/
+Disallow: /git/*/repository/archive*
+Disallow: /git/*/activity
+Disallow: /git/*/blame
+Disallow: /git/*/commits
+Disallow: /git/*/commit
+Disallow: /git/*/commit/*.patch
+Disallow: /git/*/commit/*.diff
+Disallow: /git/*/compare
+Disallow: /git/*/network
+Disallow: /git/*/graphs
+Disallow: /git/*/merge_requests/*.patch
+Disallow: /git/*/merge_requests/*.diff
+Disallow: /git/*/merge_requests/*/diffs
+Disallow: /git/*/deploy_keys
+Disallow: /git/*/hooks
+Disallow: /git/*/services
+Disallow: /git/*/protected_branches
+Disallow: /git/*/uploads/
+Disallow: /git/*/project_members
+Disallow: /git/*/settings
+Disallow: /git/*/-/import
+Disallow: /git/*/-/environments
+Disallow: /git/*/-/jobs
+Disallow: /git/*/-/requirements_management
+Disallow: /git/*/-/pipelines
+Disallow: /git/*/-/pipeline_schedules
+Disallow: /git/*/-/dependencies
+Disallow: /git/*/-/licenses
+Disallow: /git/*/-/metrics
+Disallow: /git/*/-/incidents
+Disallow: /git/*/-/value_stream_analytics
+Disallow: /git/*/-/analytics
+Disallow: /git/*/insights
